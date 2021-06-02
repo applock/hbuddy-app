@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: com.hbuddy
+testFramework: junit
+sourceLanguage: java
+buildTool: maven
+features: [annotation-api, app-name, http-client, http-session, java, java-application, junit, kafka, kafka-streams, logback, maven, mongo-sync, netflix-ribbon, netty-server, openapi, readme, redis-lettuce, shade, testcontainers, yaml]
