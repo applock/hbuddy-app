@@ -11,5 +11,9 @@ ribbon:
   VipAddress: test
   ServerListRefreshInterval: 2000
 mongodb.uri: mongodb://${MONGO_HOST:localhost}:${MONGO_PORT:27017}
-redis.uri: redis://localhost
-kafka.bootstrap.servers: localhost:9092
+kafka.bootstrap.servers: 192.168.0.110:9092
+
+redis:
+    uri: redis://localhost
+    io-thread-pool-size: 5
+    computation-thread-pool-size: 4

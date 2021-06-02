@@ -6,11 +6,11 @@ import io.micronaut.configuration.kafka.annotation.Topic;
 /**
  * kafka-streams requires at least one listener
  */
-@KafkaListener(groupId = "ExampleListener")
-public class ExampleListener {
+@KafkaListener(groupId = "HBuddyListener")
+public class HBuddyListener {
 
-    @Topic("example")
-    void example() {
-        System.out.println("example");
+    @Topic("supportRequest")
+    void supportRequest() {
+        System.out.println("Added supportRequest");
     }
 }

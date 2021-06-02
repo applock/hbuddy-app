@@ -8,11 +8,17 @@ import javax.inject.Named;
 import javax.inject.Singleton;
 
 @Factory
-public class ExampleFactory {
+public class SupportFactory {
 
     @Singleton
-    @Named("example")
-    KStream<String, String> exampleStream(ConfiguredStreamBuilder builder) {
+    @Named("support")
+    KStream<String, String> supportRequestStream(ConfiguredStreamBuilder builder) {
         return builder.stream("streams-plaintext-input");
+    }
+    
+    @Singleton
+    @Named("session")
+    KStream<String, String> sessionUpdateStream(ConfiguredStreamBuilder builder) {
+    	return builder.stream("streams-plaintext-input");
     }
 }
