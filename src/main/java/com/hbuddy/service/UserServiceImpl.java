@@ -11,7 +11,11 @@ public class UserServiceImpl implements UserService {
 
 	@Inject
 	UserRepository userRepo;
-	
+
+	public UserServiceImpl(UserRepository userRepo) {
+		this.userRepo = userRepo;
+	}
+
 	@Override
 	public User getUser(String id) {
 		// TODO Auto-generated method stub

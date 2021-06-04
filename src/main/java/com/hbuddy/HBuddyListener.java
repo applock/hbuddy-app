@@ -9,8 +9,13 @@ import io.micronaut.configuration.kafka.annotation.Topic;
 @KafkaListener(groupId = "HBuddyListener")
 public class HBuddyListener {
 
-    @Topic("supportRequest")
-    void supportRequest() {
-        System.out.println("Added supportRequest");
+    @Topic("localfeed")
+    void addLocalFeed() {
+        System.out.println("Listened a localfeed");
+    }
+    
+    @Topic("session")
+    void addWorkoutSessions() {
+        System.out.println("Listened a session");
     }
 }

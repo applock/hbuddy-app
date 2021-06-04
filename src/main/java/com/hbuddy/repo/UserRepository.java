@@ -1,5 +1,8 @@
 package com.hbuddy.repo;
 
-public interface UserRepository implements Cru{
+import com.hbuddy.beans.User;
 
+public interface UserRepository  {
+    
+    
 }

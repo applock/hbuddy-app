@@ -19,7 +19,7 @@ import com.hbuddy.beans.Daily;
 public interface UserControllerAPI {
 
 	@Get(uri = "/dailyData", produces = MediaType.APPLICATION_JSON)
-	public HttpResponse<ApiResponse> getUserDailyData(@Header(X_USERNAME) String username, @Header(X_DATE) Date date);
+	public ApiResponse getUserDailyData(@Header(X_USERNAME) String username, @Header(X_DATE) Date date);
 
 	@Post(uri = "/dailyData", consumes = MediaType.APPLICATION_JSON, produces = MediaType.APPLICATION_JSON)
 	public HttpResponse<ApiResponse> feedDailyData(@Header(X_USERNAME) String username, @Body @Valid Daily data);
