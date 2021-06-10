@@ -3,8 +3,12 @@ package com.hbuddy.service;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
+import org.bson.Document;
+
 import com.hbuddy.beans.User;
 import com.hbuddy.repo.UserRepository;
+
+import io.reactivex.Flowable;
 
 @Singleton
 public class UserServiceImpl implements UserService {
@@ -17,9 +21,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public User getUser(String id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Flowable<Document> getUser(String id) {
+		return userRepo.getUser(id);
 	}
 
 	@Override

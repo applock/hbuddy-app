@@ -1,4 +1,4 @@
-package com.hbuddy;
+package com.hbuddy.messaging;
 
 import io.micronaut.configuration.kafka.streams.ConfiguredStreamBuilder;
 import io.micronaut.context.annotation.Factory;
